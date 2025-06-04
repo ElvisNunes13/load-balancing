@@ -1,0 +1,6 @@
+cmd exec "terraform init"
+cmd exec "terraform plan"
+cmd exec "terraform fmt"
+cmd exec "terraform validate"
+cmd exec "terraform apply"
+cmd exec "terraform workspace new $NAME"
