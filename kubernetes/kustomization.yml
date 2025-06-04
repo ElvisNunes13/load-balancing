@@ -1,0 +1,15 @@
+resources:
+  - frontend/deployment.yml
+  - frontend/service.yml
+  - backend/deployment.yml
+  - backend/service.yml
+  - ingress.yml
+
+images:
+  - name: "your-image-name"
+    newName: "your-image-name"
+    newTag: v1.0
+
+  - name: "your-image-name"
+    newName: "your-image-name"
+    newTag: v1.0

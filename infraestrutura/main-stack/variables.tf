@@ -73,3 +73,22 @@ variable "vpc" {
     }  ]
   }
 }
+
+variable "ecr_repository" {
+  type = list(object({
+    name                 = string
+    image_tag_mutability = string
+    force_delete = bool
+  }))
+
+  default = [{
+    name                 = "ecr-name/production/frontend"
+    image_tag_mutability = "MUTABLE" 
+    force_delete = true
+  },
+  {
+    name                 = "ecr-name/production/backend"
+    image_tag_mutability = "MUTABLE" 
+    force_delete = true
+  }]
+}
